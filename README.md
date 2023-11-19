@@ -8,6 +8,7 @@ If your college uses BlackBoard you can load your assignments in OneBoard with i
 * Edit assignments
 * Delete assignments
 * Load assignments from BlackBoard
+* LAN access
 
 ## Setup
 Getting started is easy.
