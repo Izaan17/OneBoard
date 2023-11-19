@@ -9,6 +9,23 @@ If your college uses BlackBoard you can load your assignments in OneBoard with i
 * Delete assignments
 * Load assignments from BlackBoard
 
+## Setup
+Getting started is easy.
+
+First, clone the repository.
+
+`git clone https://github.com/Izaan17/OneBoard`
+
+Next, install all requirements.
+
+`pip3 install -r requirements.txt`
+
+Finally, run the app.
+
+`python3 app.py`
+
+
+
 ### Getting the ICS Link from BlackBoard
 **Only links work at this moment.**
 * Login into your Blackboard account
