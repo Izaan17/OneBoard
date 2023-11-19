@@ -41,7 +41,13 @@ Finally, run the app.
   
   ![SCR-20231118-rrpd](https://github.com/Izaan17/OneBoard/assets/93177492/d8278f4f-41fd-4fd5-a088-a096181e3171)
 
+* Open your browser and in the search bar write the address shown in the console.
+  
+  <img width="921" alt="SCR-20231119-blyq" src="https://github.com/Izaan17/OneBoard/assets/93177492/6bfa0147-9839-4cc2-a4d3-8c608004d596">
 
+  <img width="675" alt="SCR-20231119-bmfj" src="https://github.com/Izaan17/OneBoard/assets/93177492/50676df1-a1ba-48c6-9015-5ecb5dc6d5ad">
+
+* That's it you're all set.
 
   
 ### ICS-Guide
