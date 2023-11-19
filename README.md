@@ -1,7 +1,7 @@
 # OneBoard
 
-### Easier for College Students
-If your college uses BlackBoard OneBoard can help you load your assignments from there and has a to-do list interface. Don't worry even if your college does not use BB you can load any .ics file. There might be compatibility issues when processing but it depends on the .ics file. Click [here](#ICS-Guide) for a guide on how to update the file accordingly. Click [here](#Getting-the-ICS-Link-From-BlackBoard) for a guide on how to get the .ics link from BlackBoard.
+### Tool for College Students
+If your college uses BlackBoard you can load your assignments in OneBoard with its to-do list interface. Don't worry even if your college does not use BB you can load any .ics file. There might be compatibility issues when processing but it depends on the .ics file. Click [here](#ICS-Guide) for a guide on how to update the file accordingly. Click [here](#Getting-the-ICS-Link-From-BlackBoard) for a guide on how to get the .ics link from BlackBoard.
 
 ### Features
 * Add assignments
