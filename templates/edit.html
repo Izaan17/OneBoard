@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Assignment</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<h1>Edit Assignment</h1>
+<form action="{{ url_for('update', id=assignment.id) }}" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" value="{{ assignment.name }}" required>
+    <br>
+    <label for="due_date">Due Date:</label>
+    <input type="date" id="due_date" name="due_date" value="{{ assignment.due_date.strftime('%Y-%m-%d') }}" required>
+    <br>
+    <label for="description">Description:</label>
+    <input type="text" id="description" name="description" value="{{ assignment.description }}">
+    <br>
+    <label for="link">Link:</label>
+    <input type="text" id="link" name="link" value="{{ assignment.link }}">
+    <br>
+    <input type="checkbox" id="complete" name="complete" {% if assignment.is_complete %}checked{% endif %}>
+    <label for="complete">Complete</label>
+    <br>
+    <input type="submit" value="Update Assignment">
+</form>
+</body>
+</html>

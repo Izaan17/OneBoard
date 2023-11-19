@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneBoard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<h1 class="header">OneBoard</h1>
+<button id="changeUrlButton">Update URL</button>
+<div id="savedUrl" class="savedURL"></div>
+<div id="result"></div>
+<h2 class="header">Assignments</h2>
+<button id="toggleFormButton" class="addButton">Add</button>
+<button id="loadFromBBButton">Load from BlackBoard</button>
+<button id="massDeleteButton" class="danger">Delete All Assignments</button>
+<form id="addForm" action="/add" method="post" style="display: none;">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <br>
+    <label for="due_date">Due Date:</label>
+    <input type="date" id="due_date" name="due_date" required>
+    <br>
+    <label for="description">Description:</label>
+    <input type="text" id="description" name="description">
+    <br>
+    <label for="link">Link:</label>
+    <input type="text" id="link" name="link">
+    <br>
+    <label for="complete">Complete</label>
+    <input type="checkbox" id="complete" name="complete">
+    <br>
+    <input type="submit" value="Add Assignment">
+</form>
+<ul class="assignment">
+    {% for assignment in assignments %}
+    <li class="assignment">
+        {{ assignment.name }} - Due: {{ assignment.due_date.strftime('%m-%d-%Y') }}
+        <br>
+        Description: {{ assignment.description }}<br>
+        Link: <a href="{{ assignment.link }}">{{ assignment.link }}</a>
+        <br>
+        <label for="complete-{{ assignment.id }}">Complete</label>
+        <input type="checkbox" id="complete-{{ assignment.id }}" name="complete" {% if assignment.is_complete %}checked{% endif %}>
+        <br>
+        <ul class="inline-links">
+            <li class="inline-links">
+            <a href="{{ url_for('edit', id=assignment.id) }}">Edit</a>
+            </li>
+            <li class="inline-links">
+                <a href="{{ url_for('delete', id=assignment.id) }}">Delete</a>
+            </li>
+        </ul>
+    </li>
+    {% endfor %}
+</ul>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
