@@ -19,7 +19,7 @@ document.getElementById('toggleFormButton').addEventListener('click', function (
     form.style.display = form.style.display === 'none' ? 'block' : 'none';
 });
 
-document.getElementById('loadFromBBButton').addEventListener('click', function () {
+document.getElementById('loadFromURLButton').addEventListener('click', function () {
             // Fetch calendar data
             fetch('/fetch_calendar')
                 .then(response => response.text())
